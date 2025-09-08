@@ -1,8 +1,8 @@
 # EX-2: Implement-Breadth-First-Search-Traversal-of-a-Graph
 
-**Name:**
+**Name:D.Vishwa**
 
-**Register Number:**
+**Register Number:2305001034**
 
 ### Aim:
 To Implement Breadth First Search Traversal of a Graph using Python 3.
@@ -36,29 +36,30 @@ Step 6: Iterate steps 4 and 5 until all nodes get visited, and there are no more
 ### Program:
 ```
 def bfs(graph, start):
-    visited = []  
-    queue = [start]  
+    visited = []
+    queue = [start]
 
     while queue:
-        node = queue.pop(0)  
+        node = queue.pop(0)
         if node not in visited:
-            visited.append(node)  
-            queue.extend(graph.get(node, []))  
-
+            visited.append(node)
+            queue.extend(graph.get(node, []))
     return visited
 
 graph = {}
-n = int(input("Enter number of nodes: "))  
+n = int(input("Enter number of nodes: "))
 
 for _ in range(n):
     node = input("Enter node: ")
     neighbors = input(f"Enter neighbors of {node} (comma separated): ").split(",")
-    graph[node] = [neighbor.strip() for neighbor in neighbors]  
+    graph[node] = [neighbor.strip() for neighbor in neighbors]
 
 start_node = input("Enter the starting node for BFS: ")
 
 
-print("BFS Traversal Order:", bfs(graph, start_node))
+order = bfs(graph, start_node)
+print(" -> ".join(order))
+
 ```
 ### Sample Input:
 
@@ -81,6 +82,13 @@ Enter the starting node for BFS: A
 ### Sample Output:
 
 BFS Traversal Order: ['A', 'B', 'C']
+### Input:
+<img width="801" height="299" alt="image" src="https://github.com/user-attachments/assets/975112a1-be0d-4b2f-854c-a1b368d06814" />
+### Output:
+<img width="664" height="29" alt="image" src="https://github.com/user-attachments/assets/6e87df49-27c7-4593-be2c-47f700cfa61f" />
+
+
 
 
 ### Result:
+Thus the program was executed successfully.
